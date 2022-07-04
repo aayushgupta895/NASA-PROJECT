@@ -20,7 +20,7 @@ function loadPlanetsData(){
             }))
             .on('data',(data) =>{
                 if(isHabitablePlanet(data)){
-                    habitablePlanets.push(JSON.stringify(data));
+                    habitablePlanets.push(data['kepler_name']);
                     
                 }
                 
@@ -29,9 +29,7 @@ function loadPlanetsData(){
                 console.log(err)
                 reject(err)
             })
-            .on('end',()=>{
-                
-                
+            .on('end',()=>{  
                 console.log(`there are ${habitablePlanets.length} habitable planets`);
                 resolve()
             });
