@@ -15,6 +15,10 @@ const launch = {
 
 launches.set(launch.serialNumber, launch);
 
+function existsLaunchWithId(launchId){
+    return launches.has(launchId);
+}
+
 function getAllLaunches(){
     return Array.from(launches.values())
 }
@@ -30,7 +34,18 @@ function addNewLaunch(launch){
         flightNumber :  latestFlightNumber
     }));
 }
+
+function abortLaunchById(launchId){
+  const aborted =  launches.delete(launchId);
+  aborted.upcoming = false;
+  aborted.success = false;
+  return aborted;
+}
+
+
 module.exports = {
+    existsLaunchWithId,
     getAllLaunches,
     addNewLaunch, 
+    abortLaunchById
 };
