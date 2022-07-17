@@ -37,6 +37,7 @@ function addNewLaunch(launch){
 
 function abortLaunchById(launchId){
   const aborted =  launches.delete(launchId);
+  console.log(aborted)
   aborted.upcoming = false;
   aborted.success = false;
   return aborted;

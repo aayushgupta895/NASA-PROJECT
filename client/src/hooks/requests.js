@@ -15,7 +15,7 @@ async function httpGetLaunches() {
 }
     // Submit given launch data to launch system.
 async function httpSubmitLaunch(launch) {
-    // console.log('here');
+     console.log('here');
     try{
     return await fetch(`${api_url}/launches`,{
         method : "post",
@@ -26,6 +26,7 @@ async function httpSubmitLaunch(launch) {
     })
     }
     catch(err){
+        console.log(`${err} inside httpsubmitlaunch`)
        return {ok : false ,}//json format
     }
 }

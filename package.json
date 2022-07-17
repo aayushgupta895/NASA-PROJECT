@@ -7,8 +7,9 @@
         "server": "npm run watch --prefix server",
         "client": "npm start --prefix client",
         "watch": "npm run client | npm run server",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "deploy": "npm run build --prefix client && npm start --prefix server"
+        "test": "npm test --prefix server && npm test --prefix client",
+        "deploy": "npm run build --prefix client && npm start --prefix server",
+        "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server"
     },
     "repository": {
         "type": "git",
@@ -22,6 +23,7 @@
     },
     "homepage": "https://github.com/saranshbagaria/NASA-API#readme",
     "dependencies": {
+        "jest": "^28.1.3",
         "morgan": "^1.10.0"
     }
 }
