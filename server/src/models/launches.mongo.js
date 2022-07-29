@@ -31,7 +31,7 @@ const launchesSchema = new mongoose.Schema({
             reuqired : true,
         },
         success: {
-            type : true,
+            type : Boolean,
             required : true,
             default : true,
         },
@@ -40,4 +40,4 @@ const launchesSchema = new mongoose.Schema({
 });
 
 //connects launchesSchema with the "launches" collect
-mongoose.model('Launch', launchesSchema)
+module.exports = mongoose.model('Launch', launchesSchema)
