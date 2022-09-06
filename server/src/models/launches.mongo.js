@@ -38,6 +38,5 @@ const launchesSchema = new mongoose.Schema({
 
     
 });
-
 //connects launchesSchema with the "launches" collect
 module.exports = mongoose.model('Launch', launchesSchema)

@@ -1,4 +1,4 @@
-
+/node_modules
 server/public/build /asset-manifest.json
 server/public/build /favicon.png
 server/public/build /robots.txt
