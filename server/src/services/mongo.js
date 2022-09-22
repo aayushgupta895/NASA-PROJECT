@@ -1,9 +1,9 @@
+// require('dotenv').config()
 const mongoose = require('mongoose')
 
-const username = encodeURIComponent("nasa-api");
-const password = encodeURIComponent("bQPB9K_P:w9ZVvg");
 
-const MONGO_URL = `mongodb+srv://${username}:${password}@nasacluster.jbodr.mongodb.net/nasa?retryWrites=true&w=majority`
+console.log(process.env.name+" hello")
+const MONGO_URL = `mongodb+srv://${process.env.name}:${process.env.password}@nasacluster.jbodr.mongodb.net/nasa?retryWrites=true&w=majority`
 
 // const server = http.createServer(app);
 
