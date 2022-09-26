@@ -1,9 +1,9 @@
-// require('dotenv').config()
+require('dotenv').config()
 const mongoose = require('mongoose')
 
 
-console.log(process.env.name+" hello")
-const MONGO_URL = `mongodb+srv://${process.env.name}:${process.env.password}@nasacluster.jbodr.mongodb.net/nasa?retryWrites=true&w=majority`
+// console.log(process.env.MONGO_CLUSTER_URL+" hello")
+const MONGO_URL = process.env.MONGO_CLUSTER_URL
 
 // const server = http.createServer(app);
 
