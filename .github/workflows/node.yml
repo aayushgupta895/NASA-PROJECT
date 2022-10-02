@@ -9,12 +9,12 @@ jobs:
     env :
       CI : true
       MONGO_URL : mongodb://localhost/nasa
-    Strategy:
-    matrix:
-       node-version: [14.x, 16.x]
-       mongodb-version : ['4.4']
-     runs-on : ubuntu-latest
-     steps : 
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        mongodb-version : ['4.4']
+      runs-on : ubuntu-latest
+      steps : 
       - uses : actions/checkout@v2
       - name : Use Node.js version ${{ matrix.node-version }}
         uses : actions/setup-node@v2
