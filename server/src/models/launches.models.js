@@ -99,7 +99,7 @@ async function saveLaunch(launch){
         })
 }
 
-async function getLatestFlightNumber(){
+async function getLatestFlightNumber(launch){
     const planet = await planets.findOne({
         keplerName : launch.target
     })
@@ -119,7 +119,7 @@ async function getLatestFlightNumber(){
 }
  
 async  function scheduleNewLaunch(launch){
-    const newFlightNumber = await getLatestFlightNumber() + 1;
+    const newFlightNumber = await getLatestFlightNumber(launch) + 1;
     const newLaunch = Object.assign(launch, {
         success : true,
         upcoming : true,
