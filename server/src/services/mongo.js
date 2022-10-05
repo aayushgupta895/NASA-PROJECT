@@ -2,7 +2,8 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 
 
- console.log(process.env.MONGO_CLUSTER_URL+" hello")
+//  console.log(process.env.MONGO_CLUSTER_URL+" hello")
+
 const MONGO_URL = process.env.MONGO_CLUSTER_URL
 
 // const server = http.createServer(app);
