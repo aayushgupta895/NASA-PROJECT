@@ -5,5 +5,7 @@ server/public/build /robots.txt
 server/public/build /index.html
 server/public/build /manifest.json
 .env
-node_modules
+/node_modules
 server/node_modules
+node_modules
+node_modules
